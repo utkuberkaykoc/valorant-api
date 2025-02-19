@@ -1,0 +1,14 @@
+{
+  "name": "valorant-api-client",
+  "version": "1.0.0",
+  "description": "Client for Valorant API",
+  "main": "valorantApi.js",
+  "scripts": {
+    "start": "node valorantApi.js"
+  },
+  "author": "Utku Berkay Koç",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
