@@ -1,14 +1,19 @@
 {
-  "name": "valorant-api-client",
+  "name": "valorant-api",
   "version": "1.0.0",
-  "description": "Client for Valorant API",
+  "description": "Valorant oyun bilgilerini almak için API paketi",
   "main": "valorantApi.js",
   "scripts": {
-    "start": "node valorantApi.js"
+    "test": "node valorantApi.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utkuberkaykoc/valorant-api.git"
+  },
+  "keywords": ["valorant", "api", "game"],
   "author": "Utku Berkay Koç",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^1.4.0"
   }
 }
