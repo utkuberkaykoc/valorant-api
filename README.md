@@ -101,14 +101,14 @@ valorantInfo.getAgentInfo("breach")
   .catch(err => console.error(err));
 ```
 
-### Turkish (Directly from JSON)
+### Turkish
 ```js
 valorantInfo.getAgentInfo("breach", "tr")
   .then(data => console.log(data))
   .catch(err => console.error(err));
 ```
 
-### French (Google Translate)
+### French
 ```js
 valorantInfo.getAgentInfo("breach", "fr")
   .then(data => console.log(data))
