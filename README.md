@@ -1,10 +1,10 @@
-# Valorant Info - Valorant API Wrapper for Node.js
+# Valorant Info - Unofficial Valorant API Wrapper for Node.js
 
 ![NPM Version](https://img.shields.io/npm/v/valorant-info?color=blue&style=flat-square)
 ![Downloads](https://img.shields.io/npm/dt/valorant-info?color=green&style=flat-square)
 ![License](https://img.shields.io/npm/l/valorant-info?style=flat-square)
 
-> **Valorant Info** is a simple and efficient Node.js wrapper for fetching Valorant game data such as agents, weapons, and maps. Now with full language support (`en`, `tr`)! 🚀
+> **Valorant Info** is a simple and efficient Node.js wrapper for fetching Valorant game data such as agents, weapons, and maps. Now with full language support (`en`, `tr`, and more)! 🚀
 
 ---
 
@@ -13,7 +13,7 @@
 ✅ Fetch **Weapon Information** (e.g., Phantom, Vandal, Operator) 🔫  
 ✅ Retrieve **Map Information** (e.g., Breeze, Bind, Haven) 🗺️  
 ✅ Get **Agent Details** with **Abilities** (e.g., Jett, Reyna, Phoenix) 🎭  
-✅ **Language Support** (`en`, `tr`) 🌍  
+✅ **Multi-Language Support** (`en`, `tr`, and any other language) 🌍  
 ✅ **Structured and Clean JSON Responses** 🧹  
 ✅ No need for authentication or API keys 🔑  
 ✅ Works with **Node.js** and supports **Promises & Async/Await** ⚡  
@@ -53,14 +53,14 @@ valorantInfo.getWeaponInfo("phantom", "tr")
 
 ### Get Map Information
 ```js
-valorantInfo.getMapInfo("breeze", "en")
+valorantInfo.getMapInfo("breeze", "fr")
   .then(data => console.log(data))
   .catch(err => console.error(err));
 ```
 
 ### Get Agent Information with Abilities
 ```js
-valorantInfo.getAgentInfo("jett", "tr")
+valorantInfo.getAgentInfo("jett", "es")
   .then(data => console.log(data))
   .catch(err => console.error(err));
 ```
@@ -73,21 +73,21 @@ valorantInfo.getAgentInfo("jett", "tr")
 - Fetches details of a specified weapon.
 - **Parameters:**
   - `weaponName` _(string)_ → Name of the weapon (e.g., "phantom", "vandal").
-  - `language` _(string, optional)_ → Language code (`"en"`, `"tr"`). Defaults to `"en"`.
+  - `language` _(string, optional)_ → Language code (`"en"`, `"tr"`, or any other language). Defaults to `"en"`.
 - **Returns:** `Promise<object>` → Weapon details in JSON format.
 
 ### `getMapInfo(mapName, language)`
 - Fetches details of a specified map.
 - **Parameters:**
   - `mapName` _(string)_ → Name of the map (e.g., "breeze", "bind").
-  - `language` _(string, optional)_ → Language code (`"en"`, `"tr"`). Defaults to `"en"`.
+  - `language` _(string, optional)_ → Language code (`"en"`, `"tr"`, or any other language). Defaults to `"en"`.
 - **Returns:** `Promise<object>` → Map details in JSON format.
 
 ### `getAgentInfo(agentName, language)`
 - Fetches details of a specified agent, including abilities.
 - **Parameters:**
   - `agentName` _(string)_ → Name of the agent (e.g., "jett", "reyna").
-  - `language` _(string, optional)_ → Language code (`"en"`, `"tr"`). Defaults to `"en"`.
+  - `language` _(string, optional)_ → Language code (`"en"`, `"tr"`, or any other language). Defaults to `"en"`.
 - **Returns:** `Promise<object>` → Agent details with abilities in JSON format.
 
 ---
@@ -100,42 +100,19 @@ valorantInfo.getAgentInfo("breach")
   .then(data => console.log(data))
   .catch(err => console.error(err));
 ```
-**Response:**
-```json
-{
-  "name": "BREACH",
-  "biography": "Equips powerful abilities that cause disruption.",
-  "role": "Initiator",
-  "abilities": [
-    {
-      "key": "Q",
-      "name": "Flashpoint",
-      "description": "EQUIP a blinding charge..."
-    }
-  ]
-}
-```
 
-### Turkish
+### Turkish (Directly from JSON)
 ```js
 valorantInfo.getAgentInfo("breach", "tr")
   .then(data => console.log(data))
   .catch(err => console.error(err));
 ```
-**Response:**
-```json
-{
-  "name": "BREACH",
-  "biography": "Güçlü yetenekleriyle düşman hatlarını bozar.",
-  "role": "Öncü",
-  "abilities": [
-    {
-      "key": "Q",
-      "name": "Gözkamaştıran",
-      "description": "Kör edici bir yük KUŞAN..."
-    }
-  ]
-}
+
+### French (Google Translate)
+```js
+valorantInfo.getAgentInfo("breach", "fr")
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
 ```
 
 ---
@@ -143,7 +120,7 @@ valorantInfo.getAgentInfo("breach", "tr")
 ## ⚙️ Requirements
 
 - **Node.js v14+** recommended
-- **Axios** is used for making HTTP requests (installed automatically)
+- **Axios** and **node-google-translate-skidz** for translations (installed automatically)
 
 ---
 

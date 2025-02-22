@@ -1,7 +1,7 @@
 {
   "name": "valorant-info",
-  "version": "1.0.3",
-  "description": "Valorant oyun bilgilerini (silahlar, haritalar ve ajanlar) almak için yapılan bir proje.",
+  "version": "1.0.4",
+  "description": "A Node.js wrapper for retrieving Valorant game data, including agents, weapons, and maps. Supports multi-language translation!",
   "main": "valorantApi.js",
   "scripts": {
     "test": "node valorantApi.js"
@@ -10,10 +10,18 @@
     "type": "git",
     "url": "https://github.com/utkuberkaykoc/valorant-info.git"
   },
-  "keywords": ["valorant", "api", "game"],
+  "keywords": [
+    "valorant",
+    "api",
+    "game",
+    "multi-language",
+    "valorant-agents",
+    "valorant-weapons",
+    "valorant-maps"
+  ],
   "author": "Utku Berkay Koç",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0"
-  }
+    }
 }
