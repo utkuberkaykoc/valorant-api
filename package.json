@@ -1,6 +1,6 @@
 {
   "name": "valorant-info",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Valorant oyun bilgilerini (silahlar, haritalar ve ajanlar) almak için yapılan bir proje.",
   "main": "valorantApi.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/utkuberkaykoc/valorant-api.git"
+    "url": "https://github.com/utkuberkaykoc/valorant-info.git"
   },
   "keywords": ["valorant", "api", "game"],
   "author": "Utku Berkay Koç",
