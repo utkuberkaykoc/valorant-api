@@ -1,7 +1,7 @@
 {
-  "name": "valorant-api",
+  "name": "valorant-info",
   "version": "1.0.0",
-  "description": "Valorant oyun bilgilerini almak için API paketi",
+  "description": "Valorant oyun bilgilerini (silahlar, haritalar ve ajanlar) almak için yapılan bir proje.",
   "main": "valorantApi.js",
   "scripts": {
     "test": "node valorantApi.js"

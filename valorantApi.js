@@ -2,10 +2,10 @@ const axios = require('axios');
 
 const apiUrl = 'https://utku.berkaykoc.net/api/valorant';
 
-async function getWeaponInfo(weaponName) {
+async function getWeaponInfo(weaponName, language = "en") {
   try {
     const response = await axios.get(`${apiUrl}/weapon`, {
-      params: { name: weaponName }
+      params: { name: weaponName, lang: language }
     });
     return response.data;
   } catch (error) {
@@ -13,10 +13,10 @@ async function getWeaponInfo(weaponName) {
   }
 }
 
-async function getMapInfo(mapName) {
+async function getMapInfo(mapName, language = "en") {
   try {
     const response = await axios.get(`${apiUrl}/map`, {
-      params: { name: mapName }
+      params: { name: mapName, lang: language }
     });
     return response.data;
   } catch (error) {
@@ -24,10 +24,10 @@ async function getMapInfo(mapName) {
   }
 }
 
-async function getAgentInfo(agentName) {
+async function getAgentInfo(agentName, language = "en") {
   try {
     const response = await axios.get(`${apiUrl}/agent`, {
-      params: { name: agentName }
+      params: { name: agentName, lang: language }
     });
     return response.data;
   } catch (error) {
