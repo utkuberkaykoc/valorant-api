@@ -1,6 +1,6 @@
 {
   "name": "valorant-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Valorant oyun bilgilerini (silahlar, haritalar ve ajanlar) almak için yapılan bir proje.",
   "main": "valorantApi.js",
   "scripts": {
