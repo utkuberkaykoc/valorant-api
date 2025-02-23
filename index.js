@@ -1,37 +1,43 @@
-const axios = require('axios');
+const fetch = require('node-fetch');
 
 const apiUrl = 'https://utku.berkaykoc.net/api/valorant';
 
 async function getWeaponInfo(weaponName, language = "en") {
   try {
-    const response = await axios.get(`${apiUrl}/weapon`, {
-      params: { name: weaponName, lang: language }
-    });
-    return response.data;
+    const response = await fetch(`${apiUrl}/weapon?name=${weaponName}&lang=${language}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
   } catch (error) {
-    throw new Error(error.response ? error.response.data : error.message);
+    throw new Error(error.message);
   }
 }
 
 async function getMapInfo(mapName, language = "en") {
   try {
-    const response = await axios.get(`${apiUrl}/map`, {
-      params: { name: mapName, lang: language }
-    });
-    return response.data;
+    const response = await fetch(`${apiUrl}/map?name=${mapName}&lang=${language}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
   } catch (error) {
-    throw new Error(error.response ? error.response.data : error.message);
+    throw new Error(error.message);
   }
 }
 
 async function getAgentInfo(agentName, language = "en") {
   try {
-    const response = await axios.get(`${apiUrl}/agent`, {
-      params: { name: agentName, lang: language }
-    });
-    return response.data;
+    const response = await fetch(`${apiUrl}/agent?name=${agentName}&lang=${language}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
   } catch (error) {
-    throw new Error(error.response ? error.response.data : error.message);
+    throw new Error(error.message);
   }
 }
 
@@ -40,12 +46,3 @@ module.exports = {
   getMapInfo,
   getAgentInfo
 };
-
-/*
-        _   _            _               _               _                           _   
-  _   _| |_| | ___   _  | |__   ___ _ __| | ____ _ _   _| | _____   ___   _ __   ___| |_ 
- | | | | __| |/ / | | | | '_ \ / _ \ '__| |/ / _` | | | | |/ / _ \ / __| | '_ \ / _ \ __|
- | |_| | |_|   <| |_| |_| |_) |  __/ |  |   < (_| | |_| |   < (_) | (__ _| | | |  __/ |_ 
-  \__,_|\__|_|\_\\__,_(_)_.__/ \___|_|  |_|\_\__,_|\__, |_|\_\___/ \___(_)_| |_|\___|\__|
-                                                   |___/                                 
-*/

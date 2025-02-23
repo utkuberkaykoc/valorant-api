@@ -120,7 +120,6 @@ valorantInfo.getAgentInfo("breach", "fr")
 ## ⚙️ Requirements
 
 - **Node.js v14+** recommended
-- **Axios** and **node-google-translate-skidz** for translations (installed automatically)
 
 ---
 
